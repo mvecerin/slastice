@@ -24,7 +24,6 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "sass": "sass --watch ./src/scss/index.scss:src/custom.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
