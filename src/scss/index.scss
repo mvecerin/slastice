@@ -1,0 +1,20 @@
+$red: #b0463f;
+$dark: #323537;
+$light: #f0f0ef;
+$white: $light;
+
+$primary: $red;
+
+$font-family-base: "Manrope";
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 960px,
+);
+$modal-header-padding-y: 0.8em;
+$modal-footer-border-color: $light;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
