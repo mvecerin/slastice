@@ -29,8 +29,8 @@ export const Buttons = ({ recipe }: Props) => {
           marginRight="0px"
         />
       </Button>
-      <DeleteRecipe recipe={recipe} />
       <EditRecipe recipe={recipe} />
+      <DeleteRecipe recipe={recipe} />
     </ButtonGroup>
   );
 };

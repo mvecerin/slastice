@@ -1,7 +1,7 @@
 import React from "react";
 import { MainContainer } from "./app/components/MainContainer";
 import { MainNavbar } from "./app/components/navbar/MainNavbar";
-import "./custom.css";
+import "./style.scss";
 
 const App = () => {
   return (

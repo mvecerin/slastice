@@ -9,12 +9,12 @@ $font-family-base: "Manrope";
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 960px,
+  lg: 940px,
+  xl: 950px,
   xxl: 960px,
 );
 $modal-header-padding-y: 0.8em;
 $modal-footer-border-color: $light;
 
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
