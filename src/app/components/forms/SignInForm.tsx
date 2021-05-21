@@ -35,6 +35,7 @@ export const SignInForm = ({ handleClose }: Props) => {
         <Form.Control
           name="username"
           onChange={handleChange}
+          value={values.username}
           placeholder="Korisničko ime"
           required
         />
@@ -48,6 +49,7 @@ export const SignInForm = ({ handleClose }: Props) => {
         <Form.Control
           name="password"
           onChange={handleChange}
+          value={values.password}
           required
           minLength={8}
           type="password"

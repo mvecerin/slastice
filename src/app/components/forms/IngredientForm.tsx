@@ -9,25 +9,28 @@ interface Props {
   handleIngredients: Function;
   ingredients: IIngredient[];
 }
+const initialIngredient = {
+  name: "",
+  amount: "",
+};
 export const IngredientForm = ({ handleIngredients, ingredients }: Props) => {
-  const [values, setValues] = useState<IIngredient>({
-    name: "",
-    amount: "",
-  });
+  const [values, setValues] = useState<IIngredient>(initialIngredient);
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleIngredients([...ingredients, values]);
-    e.currentTarget.reset();
-    setValues({
-      name: "",
-      amount: "",
-    });
+    setValues(initialIngredient);
   };
   const removeItem = (
     e: React.MouseEventHandler<HTMLElement>,
     name: string
   ) => {
     handleIngredients(ingredients.filter((item) => item.name !== name));
+  };
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
   };
   return (
     <Form onSubmit={onSubmit}>
@@ -40,12 +43,8 @@ export const IngredientForm = ({ handleIngredients, ingredients }: Props) => {
               name="name"
               placeholder="Sastojak"
               required
-              onChange={(e) =>
-                setValues({
-                  ...values,
-                  name: e.target.value,
-                })
-              }
+              value={values.name}
+              onChange={onChange}
             />
           </Form.Group>
         </Col>
@@ -55,12 +54,8 @@ export const IngredientForm = ({ handleIngredients, ingredients }: Props) => {
             <Form.Control
               name="amount"
               placeholder="Količina"
-              onChange={(e) =>
-                setValues({
-                  ...values,
-                  amount: e.target.value,
-                })
-              }
+              onChange={onChange}
+              value={values.amount}
             />
           </Form.Group>
         </Col>

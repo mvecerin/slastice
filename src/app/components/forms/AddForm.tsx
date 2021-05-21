@@ -30,6 +30,7 @@ export const AddForm = ({ handleClose }: Props) => {
           <Form.Control
             name="title"
             onChange={handleChange}
+            value={values.title}
             placeholder="Naziv"
             required
           />
@@ -40,6 +41,7 @@ export const AddForm = ({ handleClose }: Props) => {
           <Form.Control
             name="preparation"
             onChange={handleChange}
+            value={values.preparation}
             required
             as="textarea"
             placeholder="Priprema"
