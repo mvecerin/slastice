@@ -33,7 +33,6 @@ export const EditForm = ({ handleClose, recipe }: Props) => {
           <Form.Label>Naziv</Form.Label>
           <Form.Control
             name="title"
-            // defaultValue={recipe.title}
             onChange={handleChange}
             value={values.title}
             placeholder="Naziv"
@@ -47,7 +46,6 @@ export const EditForm = ({ handleClose, recipe }: Props) => {
             name="preparation"
             onChange={handleChange}
             value={values.preparation}
-            // defaultValue={recipe.preparation}
             required
             as="textarea"
             placeholder="Priprema"
